@@ -33,7 +33,7 @@ def extract_text_from_pdf(file):
 
 # 3. Opal(Gemini) 분석 함수
 def analyze_with_opal(text):
-    model = genai.GenerativeModel('gemini-1.5-pro-latest')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     prompt = f"""
     당신은 애니메이션 전공 교수입니다. 다음 과제 내용을 분석하여 루브릭에 따라 평가하세요.
     [과제 내용]:
