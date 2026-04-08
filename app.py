@@ -1,5 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"], transport='rest')
 from notion_client import Client
 from pypdf import PdfReader
 import io
@@ -14,7 +15,7 @@ except KeyError:
     st.stop()
 
 # API 연결 설정
-genai.configure(api_key=GOOGLE_API_KEY)
+genai.configure(api_key=GOOGLE_API_KEY, transport='rest')
 notion = Client(auth=NOTION_TOKEN)
 
 st.set_page_config(page_title="AI 애니메이션 과제 평가 시스템", layout="wide")
