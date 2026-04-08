@@ -14,8 +14,8 @@ else:
     # 2. API 설정 및 테스트
     try:
         genai.configure(api_key=api_key)
-        # 1.5-flash 대신 가장 기본인 gemini-pro로 테스트
-       model = genai.GenerativeModel('gemini-1.5-flash')
+        # 최신 모델명으로 설정
+        model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content("안녕? 너 작동하니?")
         
         st.success("✅ 연결 성공!")
